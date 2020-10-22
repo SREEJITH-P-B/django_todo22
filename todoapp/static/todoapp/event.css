@@ -1,0 +1,33 @@
+/* change colour of filled in check box */
+.checkbox-blue-grey[type="checkbox"].filled-in:checked + span:not(.lever):after 
+{
+border: 2px solid white;  
+background-color: red;
+}
+#sofia
+{
+font-family: 'Sofia';
+font-size:45px;
+}
+
+
+input[type=text] {
+width: 70%;
+
+}
+#register
+{
+    position:relative;top:15px;left:48%;width:14em;font-size:60%;
+}
+#event_box
+{
+    position:relative;top:20px;left:140px;
+}
+#rm
+{
+    position:relative;left:3%;top:5px;width:14em;font-size:60%;
+}
+#rm_all
+{
+    position:relative;left:3%;top:5px;width:14em;font-size:60%;
+}

@@ -24,5 +24,7 @@ urlpatterns = [
     path('details', views.details,name="details"),
     path('completed/<ids>',views.completed_item,name="completed"),
     path('deleted',views.delete_item,name="deleted"),
+    path('show2',views.show2,name="show2"),
+    path('deletes',views.delete_all,name="deletes"),
 
 ]

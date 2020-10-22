@@ -10,6 +10,12 @@ def show(request):
             "results":query_results,
         }
         return render(request,'todoapp/show.html',context)
+def show2(request):
+        query_results = detailss.objects.all()
+        context ={
+            "results":query_results,
+        }
+        return render(request,'todoapp/show2.html',context)
 
 def details(request):
     if request.method=='POST':
@@ -18,10 +24,13 @@ def details(request):
 
         d.completed=0
         d.save()
-        return redirect('show')
+        return redirect('show2')
 def delete_item(request):
     query_results = detailss.objects.filter(completed=True).delete()
-    return redirect('show')
+    return redirect('show2')
+def delete_all(request):
+    query_results = detailss.objects.all().delete()
+    return redirect('show2')
 
 
 
@@ -33,4 +42,4 @@ def completed_item(request,ids):
     else:
             results.completed=True;
             results.save()
-    return redirect('show')
+    return redirect('show2')
